@@ -16,6 +16,14 @@ Here are some ideas to get you started:
 
 <h1>Hi 👋, I'm Mohammed Shadin </h1>
 <p>A passionate student developer from India </p>
+
+<h2>🌱 I’m currently learning </h2>
+<ul type='circle'>
+<li>B.Tech CSE at GEC PALAKKAD</li>
+<li>Python</li>
+<li>C</li>
+<li>C++</li>
+</ul>
 <h2>🚀 Languages and Tools I know the basics of</h2>
 <p><a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="42" height="42" /></a>
 <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="42" height="42" /></a>
