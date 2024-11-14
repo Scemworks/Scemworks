@@ -1,39 +1,50 @@
+# Hi there! 👋 I'm Mohammed Shadin
 
-<!--
-**Scemworks/Scemworks** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## About Me
 
-Here are some ideas to get you started:
+### 🔭 Current Work
+- Building VersaBot - A versatile Discord bot
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🌱 Learning Journey
+- Python
+- C++
 
-<h1>Hi 👋, I'm Mohammed Shadin </h1>
-<p>A passionate student developer from India </p>
+### 🎓 Education
+- **B.Tech Computer Science & Engineering**
+  - GEC PALAKKAD
+  - 2024 - 2028 (Expected)
+- **Higher Secondary Education**
+  - P.K.M.M.H.S.S Edarikode
+  - Completed
 
-<h2>🌱 I’m currently learning </h2>
-<ul type='circle'>
-<li>B.Tech CSE at GEC PALAKKAD</li>
-<li>Python</li>
-<li>C</li>
-<li>C++</li>
-</ul>
-<h2>🚀 Languages and Tools I know the basics of</h2>
-<p><a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="42" height="42" /></a>
-<a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="42" height="42" /></a>
-<a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="42" height="42" /></a>
-<a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="42" height="42" /></a>
-<a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="42" height="42" /></a>
-<a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="42" height="42" /></a></p>
-<h2>⚡️ Where to find me</h2>
-<p><a target="_blank" href="https://www.instagram.com/pm.shadin" style="display: inline-block;"><img src="https://img.shields.io/badge/instagram-logo?style=for-the-badge&logo=instagram&logoColor=white&color=%23F35369" alt="instagram" /></a></p>
-<p><img align="center" src="https://github-readme-stats.vercel.app/api?username=scemworks&show_icons=true&locale=en" alt="scemworks" /></p>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=scemworks&" alt="scemworks" /></p>
-<p><img src="https://github-readme-stats.vercel.app/api/top-langs?username=scemworks&show_icons=true&locale=en&layout=compact" alt="scemworks" /></p>
-<p><a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=scemworks" alt="scemworks" /></a></p>
+
+## Let's Connect!
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/pm.shadin)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/mohammed-shadin-5545471b5)
+[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/scemworks)
+
+## Skills & Tools
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+## GitHub Activity
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Scemworks&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Scemworks&theme=tokyonight&hide_border=false)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Scemworks&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+## 🏆 Achievements
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Scemworks&theme=tokyonight&no-frame=false&no-bg=true&margin-w=4)
+
+## Fun Stuff
+![Random Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+### Top Repositories I've Contributed To
+![Top Contributed Repos](https://github-contributor-stats.vercel.app/api?username=Scemworks&limit=5&theme=dark&combine_all_yearly_contributions=true)
+
+---
+[![Profile Views](https://visitcount.itsvg.in/api?id=Scemworks&icon=0&color=0)](https://visitcount.itsvg.in)
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
