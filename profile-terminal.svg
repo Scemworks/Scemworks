@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 850">
+  <style>
+    .bg { fill: #121212; }
+    .window-btn-red { fill: #ff5f56; }
+    .window-btn-yellow { fill: #ffbd2e; }
+    .window-btn-green { fill: #27c93f; }
+    .header-text { fill: #e0e0e0; font-family: monospace; font-size: 22px; }
+    .prompt { fill: #4db5ff; font-family: monospace; font-size: 22px; }
+    .arrow { fill: #98be65; font-family: monospace; font-size: 22px; }
+    .command { fill: #4db5ff; font-family: monospace; font-size: 22px; }
+    .ascii { fill: #98be65; font-family: monospace; font-size: 18px; white-space: pre; }
+    .profile-header { fill: #4db5ff; font-family: monospace; font-size: 24px; }
+    .divider { fill: #98be65; font-family: monospace; font-size: 22px; }
+    .label { fill: #4db5ff; font-family: monospace; font-size: 22px; }
+    .value { fill: #4db5ff; font-family: monospace; font-size: 22px; }
+    .value_imp { fill: #c678dd; font-family: monospace; font-size: 22px; }
+    .github { fill: #c678dd; font-family: monospace; font-size: 22px; }
+    .check { fill: #98be65; font-family: monospace; font-size: 22px; }
+    .blink { animation: blink 1s steps(2, start) infinite; }
+    @keyframes blink { to { visibility: hidden; } }
+  </style>
+  
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="1400" height="850" rx="10" />
+  
+  <!-- Window buttons -->
+  <circle class="window-btn-red" cx="35" cy="35" r="12" />
+  <circle class="window-btn-yellow" cx="70" cy="35" r="12" />
+  <circle class="window-btn-green" cx="105" cy="35" r="12" />
+  
+  <!-- Header text -->
+  <text x="700" y="40" class="header-text" text-anchor="middle">scemworks@github - ~</text>
+  
+  <!-- Command line 1 -->
+  <text x="30" y="110" class="prompt">scemworks@github</text>
+  <text x="250" y="110" class="arrow">~></text>
+  <text x="280" y="110" class="command">fastfetch</text>
+  
+  <!-- ASCII Art - Left Side -->
+  <text x="80" y="170" class="ascii">                @@@@@@@@@                </text>
+  <text x="80" y="190" class="ascii">           @@@@@@@@@@@@@@@@@@@           </text>
+  <text x="80" y="210" class="ascii">        @@@@@@@@@@@@@@@@@@@@@@@@@        </text>
+  <text x="80" y="230" class="ascii">      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@      </text>
+  <text x="80" y="250" class="ascii">    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    </text>
+  <text x="80" y="270" class="ascii">   @@@@@@     @@@@@@@@@@@@@     @@@@@@   </text>
+  <text x="80" y="290" class="ascii">  @@@@@@@                       @@@@@@@  </text>
+  <text x="80" y="310" class="ascii"> @@@@@@@@                       @@@@@@@@ </text>
+  <text x="80" y="330" class="ascii"> @@@@@@@@                       @@@@@@@@ </text>
+  <text x="80" y="350" class="ascii">@@@@@@@@                         @@@@@@@@</text>
+  <text x="80" y="370" class="ascii">@@@@@@@                           @@@@@@@</text>
+  <text x="80" y="390" class="ascii">@@@@@@@@                         @@@@@@@@</text>
+  <text x="80" y="410" class="ascii">@@@@@@@@                         @@@@@@@@</text>
+  <text x="80" y="430" class="ascii">@@@@@@@@@                       @@@@@@@@@</text>
+  <text x="80" y="450" class="ascii"> @@@@@@@@@                     @@@@@@@@@ </text>
+  <text x="80" y="470" class="ascii"> @@@@@@@@@@@                 @@@@@@@@@@@ </text>
+  <text x="80" y="490" class="ascii">  @@@@@  @@@@@@@         @@@@@@@@@@@@@@  </text>
+  <text x="80" y="510" class="ascii">    @@@@   @@@@@         @@@@@@@@@@@@    </text>
+  <text x="80" y="530" class="ascii">     @@@@                 @@@@@@@@@@     </text>
+  <text x="80" y="550" class="ascii">       @@@@@@@@           @@@@@@@@       </text>
+  <text x="80" y="570" class="ascii">         @@@@@@           @@@@@@         </text>
+  <text x="80" y="590" class="ascii">             @@           @@             </text>
+
+  <!-- Profile info - Right Side (adjusted spacing) -->
+  <text x="570" y="170" class="profile-header">scemworks@github</text>
+  <text x="570" y="205" class="divider">--------------------------</text>
+  
+  <text x="570" y="245" class="label">Name: </text>
+  <text x="640" y="245" class="value_imp">Mohammed Shadin</text>
+  
+  <text x="570" y="285" class="label">Role: </text>
+  <text x="640" y="285" class="value">Developer &amp; Student</text>
+  
+  <text x="570" y="325" class="label">Currently: </text>
+  <text x="705" y="325" class="value">Building VersaBot &amp; FixMyRastha</text>
+  
+  <text x="570" y="365" class="label">Languages: </text>
+  <text x="705" y="365" class="value">Python  HTML  CSS  JavaScript</text>
+  
+  <text x="705" y="405" class="value">C++  C  Flask  Node.js  TypeScript</text>
+  
+  <text x="705" y="445" class="value">React Next.js React-Native</text>
+  
+  <text x="570" y="485" class="label">GitHub: </text>
+  <text x="670" y="485" class="github">github.com/Scemworks</text>
+  
+  <text x="570" y="525" class="label">Education: </text>
+  <text x="705" y="525" class="value">B.Tech CSE @ GEC Palakkad</text>
+  
+  <text x="570" y="565" class="label">Batch: </text>
+  <text x="650" y="565" class="value">2024 - 2028</text>
+  
+  <text x="570" y="605" class="label">High School: </text>
+  <text x="730" y="605" class="value">PKMMHSS Edarikode </text>
+  <text x="950" y="605" class="check">✓</text>
+  
+  <text x="570" y="645" class="label">Motto: </text>
+  <text x="650" y="645" class="value">"Let's build something amazing!"</text>
+  
+  <text x="570" y="685" class="label">Contact: </text>
+  <text x="670" y="685" class="value_imp">pm.shadin@instagram </text>
+  <text x="670" y="725" class="value_imp">scemworks@linkedin  scem_works@x</text>
+  
+  <!-- Command line 2 with blinking cursor -->
+  <text x="30" y="820" class="prompt">scemworks@github</text>
+  <text x="250" y="820" class="arrow">~></text>
+  <text x="280" y="820" class="command blink">█</text>
+</svg>
