@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 850">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 850" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
   <style>
     .bg { fill: #121212; }
     .window-btn-red { fill: #ff5f56; }
@@ -18,6 +18,21 @@
     .check { fill: #98be65; font-family: monospace; font-size: 22px; }
     .blink { animation: blink 1s steps(2, start) infinite; }
     @keyframes blink { to { visibility: hidden; } }
+    
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      .header-text { font-size: 16px; }
+      .prompt, .arrow, .command { font-size: 14px; }
+      .ascii { font-size: 12px; }
+      .profile-header { font-size: 18px; }
+      .divider { font-size: 16px; }
+      .label, .value, .value_imp, .github, .check { font-size: 14px; }
+      
+      /* Hide ASCII art on very small screens */
+      @media (max-width: 480px) {
+        .ascii { display: none; }
+      }
+    }
   </style>
   
   <!-- Background -->
