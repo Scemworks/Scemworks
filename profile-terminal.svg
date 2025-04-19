@@ -97,8 +97,8 @@
   <text x="650" y="645" class="value">"Let's build something amazing!"</text>
   
   <text x="570" y="685" class="label">Contact: </text>
-  <text x="670" y="685" class="value_imp">pm.shadin@instagram </text>
-  <text x="670" y="725" class="value_imp">scemworks@linkedin  scem_works@x</text>
+  <text x="680" y="685" class="value_imp">pm.shadin@instagram </text>
+  <text x="680" y="725" class="value_imp">scemworks@linkedin  scem_works@x</text>
   
   <!-- Command line 2 with blinking cursor -->
   <text x="30" y="820" class="prompt">scemworks@github</text>
