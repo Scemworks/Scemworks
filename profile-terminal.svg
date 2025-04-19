@@ -18,21 +18,6 @@
     .check { fill: #98be65; font-family: monospace; font-size: 22px; }
     .blink { animation: blink 1s steps(2, start) infinite; }
     @keyframes blink { to { visibility: hidden; } }
-    
-    /* Media query for mobile devices */
-    @media (max-width: 768px) {
-      .header-text { font-size: 16px; }
-      .prompt, .arrow, .command { font-size: 14px; }
-      .ascii { font-size: 12px; }
-      .profile-header { font-size: 18px; }
-      .divider { font-size: 16px; }
-      .label, .value, .value_imp, .github, .check { font-size: 14px; }
-      
-      /* Hide ASCII art on very small screens */
-      @media (max-width: 480px) {
-        .ascii { display: none; }
-      }
-    }
   </style>
   
   <!-- Background -->
@@ -106,7 +91,7 @@
   
   <text x="570" y="605" class="label">High School: </text>
   <text x="730" y="605" class="value">PKMMHSS Edarikode </text>
-  <text x="950" y="605" class="check">✓</text>
+  <text x="955" y="605" class="check">✓</text>
   
   <text x="570" y="645" class="label">Motto: </text>
   <text x="650" y="645" class="value">"Let's build something amazing!"</text>
