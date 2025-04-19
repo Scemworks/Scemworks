@@ -1,14 +1,9 @@
 
 # Welcome to my GitHub Profile
 
-<!-- <div align="center">
+<div align="center">
   <img src="./profile-terminal.svg" alt="Terminal Profile" />
-</div> -->
-
-<div align='center'>
-<object data="./profile-terminal.xml" type="application/xml" width="100%" height="300px">
-  <p>Your browser doesn't support XML embedding. <a href="./profile-terminal.xml">Download the XML</a> instead.</p>
-</object>
+</div>
 
 
 
