@@ -100,6 +100,37 @@ print("Fetching full GitHub stats via GraphQL...")
 data = run_graphql_query(full_query, {"username": USERNAME})
 user_data = data['data']['user']
 
+# Fetch private repo commit counts separately
+# NOTE: When querying your OWN profile with your OWN token, restrictedContributionsCount
+# is always 0 because nothing is "restricted" from you. totalCommitContributions already
+# includes both public AND private commits. To get the actual private commit count,
+# we query private repos directly.
+private_repos_query = """
+{
+  viewer {
+    repositories(first: 100, privacy: PRIVATE, ownerAffiliations: OWNER) {
+      nodes {
+        defaultBranchRef {
+          target {
+            ... on Commit {
+              history(first: 0) {
+                totalCount
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+"""
+private_data = run_graphql_query(private_repos_query, {})
+private_repo_commits = 0
+if private_data and 'data' in private_data:
+    for repo in private_data['data']['viewer']['repositories']['nodes']:
+        if repo.get('defaultBranchRef') and repo['defaultBranchRef'].get('target'):
+            private_repo_commits += repo['defaultBranchRef']['target']['history']['totalCount']
+
 # 3. Calculate Stats
 total_stars = 0
 languages = {}
@@ -121,8 +152,7 @@ sorted_langs = sorted(languages.items(), key=lambda item: item[1]['size'], rever
 top_langs = sorted_langs[:5] # Top 5
 
 # Aggregate lifetime contributions
-total_commits = 0
-total_private_commits = 0
+total_commits = 0  # This will hold ALL commits (public + private) from the contributions API
 total_prs = 0
 total_issues = 0
 contributions_last_year = user_data.get('repositoriesContributedTo', {}).get('totalCount', 0)
@@ -132,8 +162,7 @@ all_days = []
 
 for y in range(created_year, current_year + 1):
     year_data = user_data[f'year_{y}']
-    total_commits += year_data['totalCommitContributions']
-    total_private_commits += year_data['restrictedContributionsCount']
+    total_commits += year_data['totalCommitContributions']  # Includes both public & private
     total_prs += year_data['totalPullRequestContributions']
     total_issues += year_data['totalIssueContributions']
     
@@ -195,7 +224,11 @@ def format_date(d_str):
 current_date_str = f"{format_date(current_start)} - {format_date(current_end)}" if current_streak > 0 else "None"
 longest_date_str = f"{format_date(longest_start)} - {format_date(longest_end)}" if longest_streak > 0 else "None"
 
-total_lifetime_commits = total_commits + total_private_commits
+# total_commits already includes private commits when querying with own token
+# private_repo_commits is the actual count from private repos
+total_private_commits = private_repo_commits
+total_public_commits = total_commits - total_private_commits
+total_lifetime_commits = total_commits
 
 # Rank Calculation
 score = total_commits * 1 + total_prs * 5 + total_issues * 3 + total_stars * 10
@@ -327,7 +360,7 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <text x="30" y="70" class="title"><tspan fill="#3fb950">Mohammed Shadin</tspan><tspan fill="#8b949e">'s </tspan><tspan fill="#58a6ff">GitHub Stats</tspan></text>
     
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">{total_stars}</tspan></text>
-    <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">{total_commits}</tspan></text>
+    <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">{total_public_commits}</tspan></text>
     <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">{total_private_commits}</tspan></text>
     <text x="30" y="180"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">{total_prs}</tspan></text>
     <text x="30" y="205"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">{contributions_last_year}</tspan></text>
