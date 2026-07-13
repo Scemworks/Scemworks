@@ -227,14 +227,13 @@ block3_height = 160 + (rows * 40)
 
 svg_height = block1_height + gap + block2_height + gap + block3_height + 20 # 20 padding at bottom
 
-# Ring math
-circumference = 2 * 3.14159 * 35 # r=35
-dashoffset = circumference - (circumference * (percentage / 100))
-
-# Streak ring math
+# Calculate ring stroke lengths (radius 40, circumference 251.327)
+r_circ = 251.327
+dash_length = 221.326
 streak_pct = min((current_streak / max(longest_streak, 1)) * 100, 100)
-streak_circumference = 2 * 3.14159 * 35
-streak_dashoffset = streak_circumference - (streak_circumference * (streak_pct / 100))
+orange_dash = dash_length * (streak_pct / 100)
+orange_gap = r_circ - orange_dash
+orange_vis = 'visibility="hidden"' if current_streak == 0 else ''
 
 # Language bar SVG components
 lang_bars = ""
@@ -343,34 +342,37 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <g class="animated-block block-2">
     {get_terminal_header(svg_width, block2_height)}
     <text x="400" y="24" text-anchor="middle" fill="#8b949e" font-size="13" font-family="'JetBrains Mono', monospace">streak_stats.sh</text>
-    <text x="30" y="70" class="title">GitHub Streak Stats</text>
     
     <!-- Dividers -->
-    <line x1="280" y1="80" x2="280" y2="160" stroke="#8b949e" stroke-width="1" opacity="0.3" />
-    <line x1="520" y1="80" x2="520" y2="160" stroke="#8b949e" stroke-width="1" opacity="0.3" />
+    <line x1="280" y1="60" x2="280" y2="170" stroke="#8b949e" stroke-width="1" opacity="0.4" />
+    <line x1="520" y1="60" x2="520" y2="170" stroke="#8b949e" stroke-width="1" opacity="0.4" />
 
     <!-- Total Contributions -->
-    <g transform="translate(160, 120)">
-        <text x="0" y="0" class="highlight">{total_contributions}</text>
-        <text x="0" y="30" class="streak-label">Total Contributions</text>
-        <text x="0" y="55" class="streak-label" font-size="12">{created_year} - Present</text>
+    <g transform="translate(160, 110)">
+        <text x="0" y="-3" class="highlight">{total_contributions}</text>
+        <text x="0" y="50" fill="#e6edf3" font-size="14" text-anchor="middle" font-family="'JetBrains Mono', monospace">Total Contributions</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">{created_year} - Present</text>
     </g>
 
     <!-- Current Streak -->
-    <g transform="translate(400, 120)">
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" />
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-dasharray="{2 * 3.14159 * 40}" stroke-dashoffset="{(2 * 3.14159 * 40) - ((2 * 3.14159 * 40) * (streak_pct / 100))}" transform="rotate(-90 0 -15)" />
-        <path d="M-5,-45 c3,-5 8,-5 12,0 c11,10 22,22 34,35 c2,3 5,6 8,9 c12,14 25,31 34,49 c9,18 14,37 14,57 c0,4 -0.4,8 -1.2,12 c-1,4 -2.4,8 -4.2,12 c-8,19 -24,33 -44,39 c-19,6 -29,8 -38,8 c-9,0 -19,-2 -28,-5 c-20,-6 -36,-21 -45,-40 c-2,-4 -3.4,-8 -4.4,-12 c-0.8,-4 -1.2,-8 -1.2,-12 c0,-19 4.6,-38 14,-56 c9,-18 22,-34 34,-49 c2,-2 4,-4 6,-6 c11,-12 22,-24 33,-35 l-46,63 c-2,2 -5,3 -8,3 c-3,-1 -5,-3 -5,-6 l-5,-47 z" fill="#f0883e" transform="scale(0.04) translate(-40, -1150)" />
-        <text x="0" y="-5" class="highlight" font-size="32">{current_streak}</text>
-        <text x="0" y="50" class="streak-label" fill="#f0883e" font-weight="bold" font-size="16">Current Streak</text>
-        <text x="0" y="70" class="streak-label" font-size="12">{current_date_str}</text>
+    <g transform="translate(400, 110)">
+        <!-- Background Track with Gap -->
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" stroke-linecap="round" stroke-dasharray="221.326 30" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" />
+        <!-- Orange Progress Ring -->
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="{orange_dash} {orange_gap}" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" {orange_vis} />
+        <!-- Flame Icon -->
+        <path d="M0,-8 C3,-4 5,-1 5,2 C5,4.8 2.8,7 0,7 C-2.8,7 -5,4.8 -5,2 C-5,-0.5 -2,-3 -1,-5 C-1.5,-4 -2,-2.5 -2,-1 C-2,1 -0.5,2 0.5,2 C1.5,2 2,1 2,-0.5 C2,-1.5 1.5,-3 0 -5 Z" fill="#f0883e" transform="translate(0, -55) scale(1.1)"/>
+        
+        <text x="0" y="-3" class="highlight" font-size="32">{current_streak}</text>
+        <text x="0" y="50" fill="#f0883e" font-weight="bold" font-size="16" text-anchor="middle" font-family="'JetBrains Mono', monospace">Current Streak</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">{current_date_str}</text>
     </g>
 
     <!-- Longest Streak -->
-    <g transform="translate(640, 120)">
-        <text x="0" y="0" class="highlight">{longest_streak}</text>
-        <text x="0" y="30" class="streak-label">Longest Streak</text>
-        <text x="0" y="55" class="streak-label" font-size="12">{longest_date_str}</text>
+    <g transform="translate(640, 110)">
+        <text x="0" y="-3" class="highlight">{longest_streak}</text>
+        <text x="0" y="50" fill="#e6edf3" font-size="14" text-anchor="middle" font-family="'JetBrains Mono', monospace">Longest Streak</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">{longest_date_str}</text>
     </g>
     </g>
   </g>

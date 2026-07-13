@@ -49,7 +49,7 @@
     <text x="30" y="70" class="title"><tspan fill="#3fb950">Mohammed Shadin</tspan><tspan fill="#8b949e">'s </tspan><tspan fill="#58a6ff">GitHub Stats</tspan></text>
     
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">0</tspan></text>
-    <text x="30" y="130"><tspan class="label">Total Commits</tspan><tspan class="colon">         : </tspan><tspan class="value">300 </tspan><tspan fill="#8b949e" font-size="12">(Inc. Private)</tspan></text>
+    <text x="30" y="130"><tspan class="label">Total Commits</tspan><tspan class="colon">         : </tspan><tspan class="value">301 </tspan><tspan fill="#8b949e" font-size="12">(Inc. Private)</tspan></text>
     <text x="30" y="155"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">9</tspan></text>
     <text x="30" y="180"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">3</tspan></text>
     <text x="360" y="105"><tspan class="label">Total Issues</tspan><tspan class="colon">          : </tspan><tspan class="value">5</tspan></text>
@@ -77,34 +77,37 @@
     <rect x="0" y="0" width="800" height="190" rx="12" ry="12" fill="none" stroke="#1f6feb" stroke-width="1.5" opacity="0.6"/>
 
     <text x="400" y="24" text-anchor="middle" fill="#8b949e" font-size="13" font-family="'JetBrains Mono', monospace">streak_stats.sh</text>
-    <text x="30" y="70" class="title">GitHub Streak Stats</text>
     
     <!-- Dividers -->
-    <line x1="280" y1="80" x2="280" y2="160" stroke="#8b949e" stroke-width="1" opacity="0.3" />
-    <line x1="520" y1="80" x2="520" y2="160" stroke="#8b949e" stroke-width="1" opacity="0.3" />
+    <line x1="280" y1="60" x2="280" y2="170" stroke="#8b949e" stroke-width="1" opacity="0.4" />
+    <line x1="520" y1="60" x2="520" y2="170" stroke="#8b949e" stroke-width="1" opacity="0.4" />
 
     <!-- Total Contributions -->
-    <g transform="translate(160, 120)">
-        <text x="0" y="0" class="highlight">324</text>
-        <text x="0" y="30" class="streak-label">Total Contributions</text>
-        <text x="0" y="55" class="streak-label" font-size="12">2021 - Present</text>
+    <g transform="translate(160, 110)">
+        <text x="0" y="-3" class="highlight">325</text>
+        <text x="0" y="50" fill="#e6edf3" font-size="14" text-anchor="middle" font-family="'JetBrains Mono', monospace">Total Contributions</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">2021 - Present</text>
     </g>
 
     <!-- Current Streak -->
-    <g transform="translate(400, 120)">
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" />
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-dasharray="251.3272" stroke-dashoffset="251.3272" transform="rotate(-90 0 -15)" />
-        <path d="M-5,-45 c3,-5 8,-5 12,0 c11,10 22,22 34,35 c2,3 5,6 8,9 c12,14 25,31 34,49 c9,18 14,37 14,57 c0,4 -0.4,8 -1.2,12 c-1,4 -2.4,8 -4.2,12 c-8,19 -24,33 -44,39 c-19,6 -29,8 -38,8 c-9,0 -19,-2 -28,-5 c-20,-6 -36,-21 -45,-40 c-2,-4 -3.4,-8 -4.4,-12 c-0.8,-4 -1.2,-8 -1.2,-12 c0,-19 4.6,-38 14,-56 c9,-18 22,-34 34,-49 c2,-2 4,-4 6,-6 c11,-12 22,-24 33,-35 l-46,63 c-2,2 -5,3 -8,3 c-3,-1 -5,-3 -5,-6 l-5,-47 z" fill="#f0883e" transform="scale(0.04) translate(-40, -1150)" />
-        <text x="0" y="-5" class="highlight" font-size="32">0</text>
-        <text x="0" y="50" class="streak-label" fill="#f0883e" font-weight="bold" font-size="16">Current Streak</text>
-        <text x="0" y="70" class="streak-label" font-size="12">None</text>
+    <g transform="translate(400, 110)">
+        <!-- Background Track with Gap -->
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" stroke-linecap="round" stroke-dasharray="221.326 30" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" />
+        <!-- Orange Progress Ring -->
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.0 251.327" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" visibility="hidden" />
+        <!-- Flame Icon -->
+        <path d="M0,-8 C3,-4 5,-1 5,2 C5,4.8 2.8,7 0,7 C-2.8,7 -5,4.8 -5,2 C-5,-0.5 -2,-3 -1,-5 C-1.5,-4 -2,-2.5 -2,-1 C-2,1 -0.5,2 0.5,2 C1.5,2 2,1 2,-0.5 C2,-1.5 1.5,-3 0 -5 Z" fill="#f0883e" transform="translate(0, -55) scale(1.1)"/>
+        
+        <text x="0" y="-3" class="highlight" font-size="32">0</text>
+        <text x="0" y="50" fill="#f0883e" font-weight="bold" font-size="16" text-anchor="middle" font-family="'JetBrains Mono', monospace">Current Streak</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">None</text>
     </g>
 
     <!-- Longest Streak -->
-    <g transform="translate(640, 120)">
-        <text x="0" y="0" class="highlight">3</text>
-        <text x="0" y="30" class="streak-label">Longest Streak</text>
-        <text x="0" y="55" class="streak-label" font-size="12">Jun 14 - Jun 16</text>
+    <g transform="translate(640, 110)">
+        <text x="0" y="-3" class="highlight">3</text>
+        <text x="0" y="50" fill="#e6edf3" font-size="14" text-anchor="middle" font-family="'JetBrains Mono', monospace">Longest Streak</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">Jun 14 - Jun 16</text>
     </g>
     </g>
   </g>
@@ -131,11 +134,11 @@
             <rect x="0" y="0" width="720" height="12" rx="6" />
         </clipPath>
         <g clip-path="url(#bar-clip)">
-            <rect x="0" y="0" width="565.3538000424464" height="12" fill="#ff5f57" />
-<rect x="565.3538000424464" y="0" width="117.4225460089484" height="12" fill="#ffbd2e" />
-<rect x="682.7763460513949" y="0" width="19.30257840687113" height="12" fill="#28c840" />
-<rect x="702.078924458266" y="0" width="10.94599335582708" height="12" fill="#58a6ff" />
-<rect x="713.0249178140931" y="0" width="6.975082185906904" height="12" fill="#d2a8ff" />
+            <rect x="0" y="0" width="564.507817061304" height="12" fill="#ff5f57" />
+<rect x="564.507817061304" y="0" width="117.24683749594553" height="12" fill="#ffbd2e" />
+<rect x="681.7546545572495" y="0" width="20.35108660395718" height="12" fill="#28c840" />
+<rect x="702.1057411612067" y="0" width="10.929614012325656" height="12" fill="#58a6ff" />
+<rect x="713.0353551735323" y="0" width="6.964644826467726" height="12" fill="#d2a8ff" />
 
         </g>
         
@@ -144,7 +147,7 @@
             
     <g transform="translate(0, 50)">
         <circle cx="6" cy="-1" r="6" fill="#ff5f57" />
-        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">TypeScript 78.5%</text>
+        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">TypeScript 78.4%</text>
     </g>
     
     <g transform="translate(240, 50)">
@@ -154,7 +157,7 @@
     
     <g transform="translate(480, 50)">
         <circle cx="6" cy="-1" r="6" fill="#28c840" />
-        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">Python 2.7%</text>
+        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">Python 2.8%</text>
     </g>
     
     <g transform="translate(0, 85)">
