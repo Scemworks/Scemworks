@@ -219,7 +219,7 @@ svg_width = 800
 gap = 30
 
 # Calculate heights dynamically
-block1_height = 215
+block1_height = 240
 block2_height = 190
 
 # Calculate language rows
@@ -303,6 +303,7 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
       .colon {{ font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: bold; fill: #8b949e; }}
       .value {{ font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: bold; fill: #e6edf3; }}
       .highlight {{ fill: #e6edf3; font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: bold; text-anchor: middle; }}
+      .streak-label {{ fill: #8b949e; font-size: 14px; text-anchor: middle; font-family: 'JetBrains Mono', monospace; }}
       /* Animation styles */
       @keyframes slideUpFade {{
         from {{ opacity: 0; transform: translateY(20px); }}
@@ -326,13 +327,14 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <text x="30" y="70" class="title"><tspan fill="#3fb950">Mohammed Shadin</tspan><tspan fill="#8b949e">'s </tspan><tspan fill="#58a6ff">GitHub Stats</tspan></text>
     
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">{total_stars}</tspan></text>
-    <text x="30" y="130"><tspan class="label">Total Commits</tspan><tspan class="colon">         : </tspan><tspan class="value">{total_lifetime_commits} </tspan><tspan fill="#8b949e" font-size="12">(Inc. Private)</tspan></text>
-    <text x="30" y="155"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">{total_prs}</tspan></text>
-    <text x="30" y="180"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">{contributions_last_year}</tspan></text>
+    <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">{total_commits}</tspan></text>
+    <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">{total_private_commits}</tspan></text>
+    <text x="30" y="180"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">{total_prs}</tspan></text>
+    <text x="30" y="205"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">{contributions_last_year}</tspan></text>
     <text x="360" y="105"><tspan class="label">Total Issues</tspan><tspan class="colon">          : </tspan><tspan class="value">{total_issues}</tspan></text>
 
     <!-- Rank Badge -->
-    <g transform="translate(680, 115)">
+    <g transform="translate(680, 135)">
       <circle cx="0" cy="0" r="40" fill="none" stroke="#21262d" stroke-width="8" />
       <circle cx="0" cy="0" r="40" fill="none" stroke="#3fb950" stroke-width="8" stroke-dasharray="{2 * 3.14159 * 40}" stroke-dashoffset="{(2 * 3.14159 * 40) - ((2 * 3.14159 * 40) * (percentage / 100))}" transform="rotate(-90)" />
       <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="32" font-weight="bold" fill="#e6edf3" text-anchor="middle">{rank}</text>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 725" width="800" height="725">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 750" width="800" height="750">
   <defs>
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
@@ -17,6 +17,7 @@
       .colon { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: bold; fill: #8b949e; }
       .value { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: bold; fill: #e6edf3; }
       .highlight { fill: #e6edf3; font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: bold; text-anchor: middle; }
+      .streak-label { fill: #8b949e; font-size: 14px; text-anchor: middle; font-family: 'JetBrains Mono', monospace; }
       /* Animation styles */
       @keyframes slideUpFade {
         from { opacity: 0; transform: translateY(20px); }
@@ -37,25 +38,26 @@
   <g transform="translate(0, 0)" filter="url(#shadow)">
     <g class="animated-block block-1">
     
-    <rect x="0" y="0" width="800" height="215" rx="12" ry="12" fill="#1c2128" />
+    <rect x="0" y="0" width="800" height="240" rx="12" ry="12" fill="#1c2128" />
     <rect x="0" y="0" width="800" height="38" rx="12" ry="12" fill="url(#headerGrad)" />
     <rect x="0" y="20" width="800" height="18" fill="url(#headerGrad)" />
     <circle cx="22" cy="19" r="6" fill="#ff5f57"/>
     <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
     <circle cx="62" cy="19" r="6" fill="#28c840"/>
-    <rect x="0" y="38" width="800" height="177" rx="12" ry="12" fill="url(#termBg)" />
-    <rect x="0" y="0" width="800" height="215" rx="12" ry="12" fill="none" stroke="#1f6feb" stroke-width="1.5" opacity="0.6"/>
+    <rect x="0" y="38" width="800" height="202" rx="12" ry="12" fill="url(#termBg)" />
+    <rect x="0" y="0" width="800" height="240" rx="12" ry="12" fill="none" stroke="#1f6feb" stroke-width="1.5" opacity="0.6"/>
 
     <text x="30" y="70" class="title"><tspan fill="#3fb950">Mohammed Shadin</tspan><tspan fill="#8b949e">'s </tspan><tspan fill="#58a6ff">GitHub Stats</tspan></text>
     
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">0</tspan></text>
-    <text x="30" y="130"><tspan class="label">Total Commits</tspan><tspan class="colon">         : </tspan><tspan class="value">304 </tspan><tspan fill="#8b949e" font-size="12">(Inc. Private)</tspan></text>
-    <text x="30" y="155"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">9</tspan></text>
-    <text x="30" y="180"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">3</tspan></text>
+    <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">304</tspan></text>
+    <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">0</tspan></text>
+    <text x="30" y="180"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">9</tspan></text>
+    <text x="30" y="205"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">3</tspan></text>
     <text x="360" y="105"><tspan class="label">Total Issues</tspan><tspan class="colon">          : </tspan><tspan class="value">5</tspan></text>
 
     <!-- Rank Badge -->
-    <g transform="translate(680, 115)">
+    <g transform="translate(680, 135)">
       <circle cx="0" cy="0" r="40" fill="none" stroke="#21262d" stroke-width="8" />
       <circle cx="0" cy="0" r="40" fill="none" stroke="#3fb950" stroke-width="8" stroke-dasharray="251.3272" stroke-dashoffset="175.92904" transform="rotate(-90)" />
       <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="32" font-weight="bold" fill="#e6edf3" text-anchor="middle">C</text>
@@ -64,7 +66,7 @@
   </g>
 
   <!-- BLOCK 2: Streaks -->
-  <g transform="translate(0, 245)" filter="url(#shadow)">
+  <g transform="translate(0, 270)" filter="url(#shadow)">
     <g class="animated-block block-2">
     
     <rect x="0" y="0" width="800" height="190" rx="12" ry="12" fill="#1c2128" />
@@ -113,7 +115,7 @@
   </g>
 
   <!-- BLOCK 3: Languages -->
-  <g transform="translate(0, 465)" filter="url(#shadow)">
+  <g transform="translate(0, 490)" filter="url(#shadow)">
     <g class="animated-block block-3">
     
     <rect x="0" y="0" width="800" height="240" rx="12" ry="12" fill="#1c2128" />
