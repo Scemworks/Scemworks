@@ -147,6 +147,9 @@ for y in range(created_year, current_year + 1):
 # Fix missing days or duplicates by sorting
 all_days.sort(key=lambda d: d['date'])
 
+today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+all_days = [d for d in all_days if d['date'] <= today_str]
+
 # Calculate streaks
 current_streak = 0
 current_start = ""
