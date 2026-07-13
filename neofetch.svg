@@ -176,9 +176,8 @@
 
       <!-- Projects -->
       <text x="440" y="396" class="info-12"><tspan fill="#58a6ff">Projects</tspan><tspan fill="#8b949e">:</tspan></text>
-      <text x="440" y="418" class="info-13"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">scemworks-discord-bot</tspan><tspan fill="#8b949e">&#160;&#160;[Python]</tspan></text>
-      <text x="440" y="440" class="info-14"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">GRID-RUSH</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[HTML/JS]</tspan></text>
-      <text x="440" y="462" class="info-15"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">pmshadin.dev</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Next.js]</tspan></text>
+      <text x="440" y="418" class="info-13"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">GRID-RUSH</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[HTML/JS]</tspan></text>
+      <text x="440" y="440" class="info-14"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">pmshadin.dev</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Next.js]</tspan></text>
     </g>
 
     <!-- FINAL PROMPT + BLINKING CURSOR -->
