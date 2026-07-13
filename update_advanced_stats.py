@@ -88,6 +88,9 @@ query($username: String!) {{
         }}
       }}
     }}
+    repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {{
+      totalCount
+    }}
     {years_queries}
   }}
 }}
@@ -122,7 +125,7 @@ total_commits = 0
 total_private_commits = 0
 total_prs = 0
 total_issues = 0
-contributions_last_year = 0
+contributions_last_year = user_data.get('repositoriesContributedTo', {}).get('totalCount', 0)
 
 # Track all contribution days for streaks
 all_days = []
@@ -213,7 +216,7 @@ svg_width = 800
 gap = 30
 
 # Calculate heights dynamically
-block1_height = 190
+block1_height = 215
 block2_height = 190
 
 # Calculate language rows
@@ -323,6 +326,7 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">{total_stars}</tspan></text>
     <text x="30" y="130"><tspan class="label">Total Commits</tspan><tspan class="colon">         : </tspan><tspan class="value">{total_lifetime_commits} </tspan><tspan fill="#8b949e" font-size="12">(Inc. Private)</tspan></text>
     <text x="30" y="155"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">{total_prs}</tspan></text>
+    <text x="30" y="180"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">{contributions_last_year}</tspan></text>
     <text x="360" y="105"><tspan class="label">Total Issues</tspan><tspan class="colon">          : </tspan><tspan class="value">{total_issues}</tspan></text>
 
     <!-- Rank Badge -->
@@ -341,6 +345,10 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <text x="400" y="24" text-anchor="middle" fill="#8b949e" font-size="13" font-family="'JetBrains Mono', monospace">streak_stats.sh</text>
     <text x="30" y="70" class="title">GitHub Streak Stats</text>
     
+    <!-- Dividers -->
+    <line x1="280" y1="80" x2="280" y2="160" stroke="#8b949e" stroke-width="1" opacity="0.3" />
+    <line x1="520" y1="80" x2="520" y2="160" stroke="#8b949e" stroke-width="1" opacity="0.3" />
+
     <!-- Total Contributions -->
     <g transform="translate(160, 120)">
         <text x="0" y="0" class="highlight">{total_contributions}</text>
@@ -352,6 +360,7 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <g transform="translate(400, 120)">
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" />
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-dasharray="{2 * 3.14159 * 40}" stroke-dashoffset="{(2 * 3.14159 * 40) - ((2 * 3.14159 * 40) * (streak_pct / 100))}" transform="rotate(-90 0 -15)" />
+        <path d="M-5,-45 c3,-5 8,-5 12,0 c11,10 22,22 34,35 c2,3 5,6 8,9 c12,14 25,31 34,49 c9,18 14,37 14,57 c0,4 -0.4,8 -1.2,12 c-1,4 -2.4,8 -4.2,12 c-8,19 -24,33 -44,39 c-19,6 -29,8 -38,8 c-9,0 -19,-2 -28,-5 c-20,-6 -36,-21 -45,-40 c-2,-4 -3.4,-8 -4.4,-12 c-0.8,-4 -1.2,-8 -1.2,-12 c0,-19 4.6,-38 14,-56 c9,-18 22,-34 34,-49 c2,-2 4,-4 6,-6 c11,-12 22,-24 33,-35 l-46,63 c-2,2 -5,3 -8,3 c-3,-1 -5,-3 -5,-6 l-5,-47 z" fill="#f0883e" transform="scale(0.04) translate(-40, -1150)" />
         <text x="0" y="-5" class="highlight" font-size="32">{current_streak}</text>
         <text x="0" y="50" class="streak-label" fill="#f0883e" font-weight="bold" font-size="16">Current Streak</text>
         <text x="0" y="70" class="streak-label" font-size="12">{current_date_str}</text>
