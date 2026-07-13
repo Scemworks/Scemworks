@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 530" width="800" height="530" role="img" aria-label="Mohammed Shadin - neofetch terminal">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0e13;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#21262d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <style>
+      text, tspan {
+        font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+      }
+      .terminal-window {
+        animation: openTerminal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        transform-origin: 400px 265px;
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      @keyframes openTerminal {
+        to { opacity: 1; transform: scale(1); }
+      }
+      .cursor {
+        animation: blink 1s step-start infinite;
+        animation-delay: 2.65s;
+        opacity: 0;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0; }
+      }
+      .prompt-line {
+        opacity: 0;
+        animation: fadeIn 0.01s forwards;
+        animation-delay: 0.6s;
+      }
+      .cmd-text {
+        clip-path: inset(0 100% 0 0);
+        animation: revealCmd 0.4s steps(8, end) forwards;
+        animation-delay: 1.4s;
+      }
+      @keyframes revealCmd {
+        0%   { clip-path: inset(0 100% 0 0); }
+        100% { clip-path: inset(0 0% 0 0); }
+      }
+      @keyframes moveCursor {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(67px); } /* 8 chars * ~8.4px */
+      }
+      .type-cursor {
+        animation: 
+          moveCursor 0.4s steps(8, end) 1.4s forwards,
+          blink 0.8s step-start 0.6s infinite,
+          solid 0.6s step-start 1.4s forwards,
+          hideCursor 0.01s 2.0s forwards;
+        opacity: 0;
+      }
+      @keyframes solid {
+        0%, 100% { opacity: 1; }
+      }
+      @keyframes hideCursor { to { opacity: 0; visibility: hidden; } }
+      .ascii-block { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.00s; }
+      .info-16 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.04s; }
+      .info-17 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.08s; }
+      .palette { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.12s; }
+      .info-0  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.20s; }
+      .info-1  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.22s; }
+      .info-2  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.24s; }
+      .info-3  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.26s; }
+      .info-4  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.28s; }
+      .info-5  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.30s; }
+      .info-6  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.32s; }
+      .info-7  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.34s; }
+      .info-8  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.36s; }
+      .info-9  { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.38s; }
+      .info-10 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.40s; }
+      .info-11 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.42s; }
+      .info-12 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.44s; }
+      .info-13 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.46s; }
+      .info-14 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.48s; }
+      .info-15 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.50s; }
+      .info-18 { opacity: 0; animation: fadeIn 0.01s forwards; animation-delay: 2.65s; }
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <g class="terminal-window">
+  <g filter="url(#shadow)">
+    <rect x="0" y="0" width="800" height="530" rx="12" ry="12" fill="#1c2128" />
+    <rect x="0" y="0" width="800" height="38" rx="12" ry="12" fill="url(#headerGrad)" />
+    <rect x="0" y="20" width="800" height="18" fill="url(#headerGrad)" />
+    <circle cx="22" cy="19" r="6" fill="#ff5f57"/>
+    <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
+    <circle cx="62" cy="19" r="6" fill="#28c840"/>
+    <text x="400" y="24" text-anchor="middle" fill="#8b949e" font-size="13" font-family="'JetBrains Mono', monospace">scemworks@github — neofetch</text>
+    <rect x="0" y="38" width="800" height="492" fill="url(#termBg)" />
+  </g>
+
+  <g xml:space="preserve">
+    <!-- PROMPT + TYPING COMMAND -->
+    <g class="prompt-line">
+      <text x="20" y="70" font-size="14" fill="#58a6ff" filter="url(#glow)"><tspan fill="#3fb950">scemworks</tspan><tspan fill="#8b949e">@</tspan><tspan fill="#58a6ff">github</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#f0883e">~</tspan><tspan fill="#8b949e">$ </tspan></text>
+      <text x="190" y="70" font-size="14" fill="#e6edf3" class="cmd-text">neofetch</text>
+      <rect x="190" y="56" width="8" height="16" fill="#58a6ff" class="type-cursor"/>
+    </g>
+
+    <!-- ASCII ART BLOCK (LEFT COLUMN) -->
+    <g class="ascii-block" font-size="8" fill="#3fb950" filter="url(#glow)" font-family="'JetBrains Mono', monospace">
+      <text x="25" y="110">███████╗&#160;██████╗███████╗███╗&#160;&#160;&#160;███╗██╗&#160;&#160;&#160;&#160;██╗&#160;██████╗&#160;██████╗&#160;██╗&#160;&#160;██╗███████╗</text>
+      <text x="25" y="119">██╔════╝██╔════╝██╔════╝████╗&#160;████║██║&#160;&#160;&#160;&#160;██║██╔═══██╗██╔══██╗██║&#160;██╔╝██╔════╝</text>
+      <text x="25" y="128">███████╗██║&#160;&#160;&#160;&#160;&#160;█████╗&#160;&#160;██╔████╔██║██║&#160;█╗&#160;██║██║&#160;&#160;&#160;██║██████╔╝█████╔╝&#160;███████╗</text>
+      <text x="25" y="137">╚════██║██║&#160;&#160;&#160;&#160;&#160;██╔══╝&#160;&#160;██║╚██╔╝██║██║███╗██║██║&#160;&#160;&#160;██║██╔══██╗██╔═██╗&#160;╚════██║</text>
+      <text x="25" y="146">███████║╚██████╗███████╗██║&#160;╚═╝&#160;██║╚███╔███╔╝╚██████╔╝██║&#160;&#160;██║██║&#160;&#160;██╗███████║</text>
+      <text x="25" y="155">╚══════╝&#160;╚═════╝╚══════╝╚═╝&#160;&#160;&#160;&#160;&#160;╚═╝&#160;╚══╝╚══╝&#160;&#160;╚═════╝&#160;╚═╝&#160;&#160;╚═╝╚═╝&#160;&#160;╚═╝╚══════╝</text>
+      
+      <text x="40" y="210" font-size="12" fill="#238636">==================================================</text>
+      <text x="40" y="230" font-size="12" fill="#238636">&#160;&#160;&#160;&#160;Building&#160;cool&#160;stuff,&#160;one&#160;commit&#160;at&#160;a&#160;time&#160;&#160;&#160;&#160;&#160;</text>
+      <text x="40" y="250" font-size="12" fill="#238636">==================================================</text>
+    </g>
+
+    <!-- STATUS & MOOD (LEFT COLUMN) -->
+    <g font-family="'JetBrains Mono', monospace" font-size="13">
+      <text x="40" y="290" class="info-16" fill="#8b949e">Status : <tspan fill="#3fb950">● online</tspan></text>
+      <text x="40" y="312" class="info-17" fill="#8b949e">Mood&#160;&#160;&#160;: <tspan fill="#f0883e">building . learning . shipping</tspan></text>
+    </g>
+
+    <!-- COLOR PALETTE (LEFT COLUMN) -->
+    <g class="palette">
+      <text x="40" y="356" font-size="12" fill="#8b949e" font-family="'JetBrains Mono', monospace">colors :</text>
+      <rect x="40"  y="370" width="22" height="14" rx="2" fill="#21262d"/>
+      <rect x="66"  y="370" width="22" height="14" rx="2" fill="#ff5f57"/>
+      <rect x="92"  y="370" width="22" height="14" rx="2" fill="#3fb950"/>
+      <rect x="118" y="370" width="22" height="14" rx="2" fill="#f0883e"/>
+      <rect x="144" y="370" width="22" height="14" rx="2" fill="#58a6ff"/>
+      <rect x="170" y="370" width="22" height="14" rx="2" fill="#bc8cff"/>
+      <rect x="196" y="370" width="22" height="14" rx="2" fill="#39c5cf"/>
+      <rect x="222" y="370" width="22" height="14" rx="2" fill="#e6edf3"/>
+      
+      <rect x="40"  y="388" width="22" height="14" rx="2" fill="#30363d"/>
+      <rect x="66"  y="388" width="22" height="14" rx="2" fill="#ffa198"/>
+      <rect x="92"  y="388" width="22" height="14" rx="2" fill="#56d364"/>
+      <rect x="118" y="388" width="22" height="14" rx="2" fill="#ffa657"/>
+      <rect x="144" y="388" width="22" height="14" rx="2" fill="#79c0ff"/>
+      <rect x="170" y="388" width="22" height="14" rx="2" fill="#d2a8ff"/>
+      <rect x="196" y="388" width="22" height="14" rx="2" fill="#76e3ea"/>
+      <rect x="222" y="388" width="22" height="14" rx="2" fill="#ffffff"/>
+    </g>
+
+    <!-- INFO PANEL (RIGHT COLUMN) -->
+    <g font-family="'JetBrains Mono', monospace" font-size="14">
+      <text x="440" y="120" class="info-0"><tspan fill="#3fb950" font-weight="bold">mohammed</tspan><tspan fill="#8b949e">@</tspan><tspan fill="#58a6ff" font-weight="bold">scemworks</tspan></text>
+      <text x="440" y="140" fill="#30363d" class="info-1">---------------------------------</text>
+      <text x="440" y="166" class="info-2"><tspan fill="#58a6ff">OS&#160;&#160;&#160;&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">GitHub Flavored Linux</tspan></text>
+      <text x="440" y="188" class="info-3"><tspan fill="#58a6ff">Host&#160;&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">github.com/Scemworks</tspan></text>
+      <text x="440" y="210" class="info-4"><tspan fill="#58a6ff">City&#160;&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">Malaysia</tspan></text>
+      <text x="440" y="232" class="info-5"><tspan fill="#58a6ff">Uptime</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">active since 2024</tspan></text>
+      <text x="440" y="254" class="info-6"><tspan fill="#58a6ff">Shell&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">bash / zsh</tspan></text>
+      <text x="440" y="276" class="info-7"><tspan fill="#58a6ff">Editor</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">VS Code</tspan></text>
+      <text x="440" y="298" class="info-8"><tspan fill="#58a6ff">Lang&#160;&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">Python, JS, HTML</tspan></text>
+      <text x="440" y="320" class="info-9"><tspan fill="#58a6ff">Repos&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#f0883e">5</tspan><tspan fill="#e6edf3"> public</tspan></text>
+      <text x="440" y="342" class="info-10"><tspan fill="#58a6ff">Follow</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">8 followers, 13 following</tspan></text>
+      <text x="440" y="364" class="info-11"><tspan fill="#58a6ff">Stars&#160;</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#f0883e">11</tspan><tspan fill="#e6edf3"> total</tspan></text>
+
+      <!-- Projects -->
+      <text x="440" y="396" class="info-12"><tspan fill="#58a6ff">Projects</tspan><tspan fill="#8b949e">:</tspan></text>
+      <text x="440" y="418" class="info-13"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">scemworks-discord-bot</tspan><tspan fill="#8b949e">&#160;&#160;[Python]</tspan></text>
+      <text x="440" y="440" class="info-14"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">GRID-RUSH</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[HTML/JS]</tspan></text>
+      <text x="440" y="462" class="info-15"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">pmshadin.dev</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Next.js]</tspan></text>
+    </g>
+
+    <!-- FINAL PROMPT + BLINKING CURSOR -->
+    <g class="info-18">
+      <text x="20" y="500" font-size="14" font-family="'JetBrains Mono', monospace"><tspan fill="#3fb950">scemworks</tspan><tspan fill="#8b949e">@</tspan><tspan fill="#58a6ff">github</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#f0883e">~</tspan><tspan fill="#8b949e">$ </tspan></text>
+      <rect x="190" y="486" width="8" height="16" rx="1" fill="#58a6ff" class="cursor"/>
+    </g>
+  </g>
+
+  <!-- OUTER BORDER GLOW -->
+  <rect x="0" y="0" width="800" height="530" rx="12" ry="12" fill="none" stroke="#1f6feb" stroke-width="1.5" opacity="0.6"/>
+  </g>
+</svg>
