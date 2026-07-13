@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 test_graphql.py
+debug_private.py
