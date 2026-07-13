@@ -65,4 +65,25 @@ svg_content = re.sub(
 with open(svg_path, "w", encoding="utf-8") as f:
     f.write(svg_content)
 
+# 6. Update README.md to bypass GitHub caching
+import time
+readme_path = "README.md"
+try:
+    with open(readme_path, "r", encoding="utf-8") as f:
+        readme_content = f.read()
+    
+    timestamp = int(time.time())
+    # Regex to replace existing query param if it exists, or append one if it doesn't
+    readme_content = re.sub(
+        r'(<img\s+src="\./neofetch\.svg)(?:\?v=\d+)?(")',
+        rf'\g<1>?v={timestamp}\g<2>',
+        readme_content
+    )
+    
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(readme_content)
+    print(f"Updated README.md image cache with timestamp {timestamp}")
+except Exception as e:
+    print(f"Error updating README.md: {e}")
+
 print(f"Successfully updated SVG! Repos: {repos}, Followers: {followers}, Following: {following}, Stars: {stars}")
