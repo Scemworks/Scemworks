@@ -146,31 +146,48 @@ all_days.sort(key=lambda d: d['date'])
 
 # Calculate streaks
 current_streak = 0
-longest_streak = 0
-temp_streak = 0
-total_contributions = 0
+current_start = ""
+current_end = ""
 
-today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-yesterday_str = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-is_current_streak_active = False
+longest_streak = 0
+longest_start = ""
+longest_end = ""
+temp_streak = 0
+temp_start = ""
+total_contributions = 0
 
 for day in all_days:
     total_contributions += day['count']
     if day['count'] > 0:
+        if temp_streak == 0:
+            temp_start = day['date']
         temp_streak += 1
-        longest_streak = max(longest_streak, temp_streak)
-        if day['date'] == today_str or day['date'] == yesterday_str:
-            is_current_streak_active = True
+        if temp_streak > longest_streak:
+            longest_streak = temp_streak
+            longest_start = temp_start
+            longest_end = day['date']
     else:
-        # Check if we should reset current streak
-        if day['date'] < yesterday_str:
-            temp_streak = 0
-        elif day['date'] == yesterday_str and day['count'] == 0:
-             # If yesterday had 0, streak is broken unless today has contributions (handled next iteration)
-             temp_streak = 0
+        temp_streak = 0
 
-# Assign current streak
-current_streak = temp_streak if is_current_streak_active else 0
+# Walk backwards to find current streak
+idx = len(all_days) - 1
+if idx >= 0:
+    if all_days[idx]['count'] == 0:
+        idx -= 1 # skip today if 0
+    if idx >= 0 and all_days[idx]['count'] > 0:
+        current_end = all_days[idx]['date']
+        while idx >= 0 and all_days[idx]['count'] > 0:
+            current_streak += 1
+            current_start = all_days[idx]['date']
+            idx -= 1
+
+def format_date(d_str):
+    if not d_str: return ""
+    d = datetime.datetime.strptime(d_str, "%Y-%m-%d")
+    return d.strftime("%b %d").replace(" 0", " ")
+
+current_date_str = f"{format_date(current_start)} - {format_date(current_end)}" if current_streak > 0 else "None"
+longest_date_str = f"{format_date(longest_start)} - {format_date(longest_end)}" if longest_streak > 0 else "None"
 
 total_lifetime_commits = total_commits + total_private_commits
 
@@ -337,12 +354,14 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-dasharray="{2 * 3.14159 * 40}" stroke-dashoffset="{(2 * 3.14159 * 40) - ((2 * 3.14159 * 40) * (streak_pct / 100))}" transform="rotate(-90 0 -15)" />
         <text x="0" y="-5" class="highlight" font-size="32">{current_streak}</text>
         <text x="0" y="50" class="streak-label" fill="#f0883e" font-weight="bold" font-size="16">Current Streak</text>
+        <text x="0" y="70" class="streak-label" font-size="12">{current_date_str}</text>
     </g>
 
     <!-- Longest Streak -->
     <g transform="translate(640, 120)">
         <text x="0" y="0" class="highlight">{longest_streak}</text>
         <text x="0" y="30" class="streak-label">Longest Streak</text>
+        <text x="0" y="55" class="streak-label" font-size="12">{longest_date_str}</text>
     </g>
     </g>
   </g>
