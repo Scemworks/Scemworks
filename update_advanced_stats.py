@@ -322,16 +322,17 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     <g class="animated-block block-2">
     {get_terminal_header(svg_width, block2_height)}
     <text x="400" y="24" text-anchor="middle" fill="#8b949e" font-size="13" font-family="'JetBrains Mono', monospace">streak_stats.sh</text>
+    <text x="30" y="70" class="title">GitHub Streak Stats</text>
     
     <!-- Total Contributions -->
-    <g transform="translate(160, 110)">
+    <g transform="translate(160, 120)">
         <text x="0" y="0" class="highlight">{total_contributions}</text>
         <text x="0" y="30" class="streak-label">Total Contributions</text>
         <text x="0" y="55" class="streak-label" font-size="12">{created_year} - Present</text>
     </g>
 
     <!-- Current Streak -->
-    <g transform="translate(400, 110)">
+    <g transform="translate(400, 120)">
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" />
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-dasharray="{2 * 3.14159 * 40}" stroke-dashoffset="{(2 * 3.14159 * 40) - ((2 * 3.14159 * 40) * (streak_pct / 100))}" transform="rotate(-90 0 -15)" />
         <text x="0" y="-5" class="highlight" font-size="32">{current_streak}</text>
@@ -339,7 +340,7 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_wid
     </g>
 
     <!-- Longest Streak -->
-    <g transform="translate(640, 110)">
+    <g transform="translate(640, 120)">
         <text x="0" y="0" class="highlight">{longest_streak}</text>
         <text x="0" y="30" class="streak-label">Longest Streak</text>
     </g>
