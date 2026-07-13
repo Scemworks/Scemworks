@@ -164,7 +164,7 @@
       <text x="440" y="120" class="info-0"><tspan fill="#3fb950" font-weight="bold">mohammed</tspan><tspan fill="#8b949e">@</tspan><tspan fill="#58a6ff" font-weight="bold">scemworks</tspan></text>
       <text x="440" y="140" fill="#30363d" class="info-1">---------------------------------</text>
       <text x="440" y="166" class="info-2"><tspan fill="#58a6ff">OS    </tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">GitHub Flavored Linux</tspan></text>
-      <text x="440" y="188" class="info-3"><tspan fill="#58a6ff">Host  </tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">pmshadin.dev</tspan></text>
+      <text x="440" y="188" class="info-3"><tspan fill="#58a6ff">Host  </tspan><tspan fill="#8b949e">: </tspan><a href="https://pmshadin.dev" target="_blank"><tspan fill="#e6edf3">pmshadin.dev</tspan></a></text>
       <text x="440" y="210" class="info-4"><tspan fill="#58a6ff">City  </tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">Malaysia</tspan></text>
       <text x="440" y="232" class="info-5"><tspan fill="#58a6ff">Role  </tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">Frontend Developer</tspan></text>
       <text x="440" y="254" class="info-6"><tspan fill="#58a6ff">Tools </tspan><tspan fill="#8b949e">: </tspan><tspan fill="#e6edf3">React, Next.js, Tailwind</tspan></text>
@@ -177,7 +177,7 @@
       <!-- Projects -->
       <text x="440" y="396" class="info-12"><tspan fill="#58a6ff">Projects</tspan><tspan fill="#8b949e">:</tspan></text>
       <text x="440" y="418" class="info-13"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">GRID-RUSH</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[HTML/JS]</tspan></text>
-      <text x="440" y="440" class="info-14"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><tspan fill="#3fb950">pmshadin.dev</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Next.js]</tspan></text>
+      <text x="440" y="440" class="info-14"><tspan fill="#8b949e">&#160;&#160;&gt;&#160;</tspan><a href="https://pmshadin.dev" target="_blank"><tspan fill="#3fb950">pmshadin.dev</tspan></a><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Next.js]</tspan></text>
     </g>
 
     <!-- FINAL PROMPT + BLINKING CURSOR -->
