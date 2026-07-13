@@ -55,12 +55,11 @@ svg_content = re.sub(
 )
 
 # Stars
-if stars > 0:
-    svg_content = re.sub(
-        r'(<text x="440" y="364" class="info-11">.*?<tspan fill="#f0883e">)\d+(</tspan><tspan fill="#e6edf3"> total</tspan></text>)',
-        rf'\g<1>{stars}\g<2>',
-        svg_content
-    )
+svg_content = re.sub(
+    r'(<text x="440" y="364" class="info-11">.*?<tspan fill="#f0883e">)\d+(</tspan><tspan fill="#e6edf3"> total</tspan></text>)',
+    rf'\g<1>{stars}\g<2>',
+    svg_content
+)
 
 # 5. Write back to SVG
 with open(svg_path, "w", encoding="utf-8") as f:
