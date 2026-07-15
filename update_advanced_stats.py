@@ -176,50 +176,76 @@ for y in range(created_year, current_year + 1):
 # Fix missing days or duplicates by sorting
 all_days.sort(key=lambda d: d['date'])
 
-today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-all_days = [d for d in all_days if d['date'] <= today_str]
+today_date = datetime.datetime.now().date()
+today_str = today_date.strftime("%Y-%m-%d")
+tomorrow_str = (today_date + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+
+filtered_days = []
+for day in all_days:
+    d_str = day['date']
+    c = day['count']
+    if d_str <= today_str or (d_str == tomorrow_str and c > 0):
+        filtered_days.append(day)
+
+all_days = filtered_days
 
 # Calculate streaks
+excluded_days = []
+
+def is_excluded_day(date_str, excluded):
+    if not excluded:
+        return False
+    dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+    return dt.strftime("%a") in excluded
+
+if all_days:
+    first_date = all_days[0]['date']
+    last_date = all_days[-1]['date']
+else:
+    first_date = today_str
+    last_date = today_str
+
 current_streak = 0
-current_start = ""
-current_end = ""
+current_start = first_date
+current_end = first_date
 
 longest_streak = 0
-longest_start = ""
-longest_end = ""
-temp_streak = 0
-temp_start = ""
+longest_start = first_date
+longest_end = first_date
+
 total_contributions = 0
 
 for day in all_days:
-    total_contributions += day['count']
-    if day['count'] > 0:
-        if temp_streak == 0:
-            temp_start = day['date']
-        temp_streak += 1
-        if temp_streak > longest_streak:
-            longest_streak = temp_streak
-            longest_start = temp_start
-            longest_end = day['date']
-    else:
-        temp_streak = 0
-
-# Walk backwards to find current streak
-idx = len(all_days) - 1
-if idx >= 0:
-    if all_days[idx]['count'] == 0:
-        idx -= 1 # skip today if 0
-    if idx >= 0 and all_days[idx]['count'] > 0:
-        current_end = all_days[idx]['date']
-        while idx >= 0 and all_days[idx]['count'] > 0:
-            current_streak += 1
-            current_start = all_days[idx]['date']
-            idx -= 1
+    date = day['date']
+    count = day['count']
+    total_contributions += count
+    
+    # check if still in streak
+    if count > 0 or (current_streak > 0 and is_excluded_day(date, excluded_days)):
+        current_streak += 1
+        current_end = date
+        # set start on first day of streak
+        if current_streak == 1:
+            current_start = date
+            
+        # update longestStreak
+        if current_streak >= longest_streak:
+            longest_streak = current_streak
+            longest_start = current_start
+            longest_end = current_end
+    # reset streak but give exception for today
+    elif date != last_date:
+        current_streak = 0
+        current_start = last_date
+        current_end = last_date
 
 def format_date(d_str):
     if not d_str: return ""
     d = datetime.datetime.strptime(d_str, "%Y-%m-%d")
-    return d.strftime("%b %d").replace(" 0", " ")
+    if d.year == current_year:
+        return d.strftime("%b %d").replace(" 0", " ")
+    else:
+        return d.strftime("%b %d, %Y").replace(" 0", " ")
 
 current_date_str = f"{format_date(current_start)} - {format_date(current_end)}" if current_streak > 0 else "None"
 longest_date_str = f"{format_date(longest_start)} - {format_date(longest_end)}" if longest_streak > 0 else "None"
