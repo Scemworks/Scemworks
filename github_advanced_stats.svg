@@ -96,13 +96,13 @@
         <!-- Background Track with Gap -->
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" stroke-linecap="round" stroke-dasharray="221.326 30" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" />
         <!-- Orange Progress Ring -->
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="221.326 30.001000000000005" stroke-dashoffset="-15" transform="rotate(-90 0 -15)"  />
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.0 251.327" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" visibility="hidden" />
         <!-- Flame Icon -->
         <path d="M0,-8 C3,-4 5,-1 5,2 C5,4.8 2.8,7 0,7 C-2.8,7 -5,4.8 -5,2 C-5,-0.5 -2,-3 -1,-5 C-1.5,-4 -2,-2.5 -2,-1 C-2,1 -0.5,2 0.5,2 C1.5,2 2,1 2,-0.5 C2,-1.5 1.5,-3 0 -5 Z" fill="#f0883e" transform="translate(0, -55) scale(1.1)"/>
         
-        <text x="0" y="-3" class="highlight" font-size="32">3</text>
+        <text x="0" y="-3" class="highlight" font-size="32">0</text>
         <text x="0" y="50" fill="#f0883e" font-weight="bold" font-size="16" text-anchor="middle" font-family="'JetBrains Mono', monospace">Current Streak</text>
-        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">Jul 13 - Jul 15</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">None</text>
     </g>
 
     <!-- Longest Streak -->
