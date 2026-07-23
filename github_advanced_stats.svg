@@ -50,8 +50,8 @@
     <text x="30" y="70" class="title"><tspan fill="#3fb950">Mohammed Shadin</tspan><tspan fill="#8b949e">'s </tspan><tspan fill="#58a6ff">GitHub Stats</tspan></text>
     
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">0</tspan></text>
-    <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">159</tspan></text>
-    <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">190</tspan></text>
+    <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">160</tspan></text>
+    <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">192</tspan></text>
     <text x="30" y="180"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">9</tspan></text>
     <text x="30" y="205"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">3</tspan></text>
     <text x="360" y="105"><tspan class="label">Total Issues</tspan><tspan class="colon">          : </tspan><tspan class="value">5</tspan></text>
@@ -86,7 +86,7 @@
 
     <!-- Total Contributions -->
     <g transform="translate(160, 110)">
-        <text x="0" y="-3" class="highlight">372</text>
+        <text x="0" y="-3" class="highlight">375</text>
         <text x="0" y="50" fill="#e6edf3" font-size="14" text-anchor="middle" font-family="'JetBrains Mono', monospace">Total Contributions</text>
         <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">2021 - Present</text>
     </g>
@@ -96,13 +96,13 @@
         <!-- Background Track with Gap -->
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" stroke-linecap="round" stroke-dasharray="221.326 30" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" />
         <!-- Orange Progress Ring -->
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.0 251.327" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" visibility="hidden" />
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="73.77533333333332 177.55166666666668" stroke-dashoffset="-15" transform="rotate(-90 0 -15)"  />
         <!-- Flame Icon -->
         <path d="M0,-8 C3,-4 5,-1 5,2 C5,4.8 2.8,7 0,7 C-2.8,7 -5,4.8 -5,2 C-5,-0.5 -2,-3 -1,-5 C-1.5,-4 -2,-2.5 -2,-1 C-2,1 -0.5,2 0.5,2 C1.5,2 2,1 2,-0.5 C2,-1.5 1.5,-3 0 -5 Z" fill="#f0883e" transform="translate(0, -55) scale(1.1)"/>
         
-        <text x="0" y="-3" class="highlight" font-size="32">0</text>
+        <text x="0" y="-3" class="highlight" font-size="32">1</text>
         <text x="0" y="50" fill="#f0883e" font-weight="bold" font-size="16" text-anchor="middle" font-family="'JetBrains Mono', monospace">Current Streak</text>
-        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">None</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">Jul 23 - Jul 23</text>
     </g>
 
     <!-- Longest Streak -->
@@ -136,11 +136,11 @@
             <rect x="0" y="0" width="720" height="12" rx="6" />
         </clipPath>
         <g clip-path="url(#bar-clip)">
-            <rect x="0" y="0" width="577.1985961287899" height="12" fill="#ff5f57" />
-<rect x="577.1985961287899" y="0" width="105.5823835291632" height="12" fill="#ffbd2e" />
-<rect x="682.780979657953" y="0" width="20.848661274987386" height="12" fill="#28c840" />
-<rect x="703.6296409329404" y="0" width="10.880706161304333" height="12" fill="#58a6ff" />
-<rect x="714.5103470942448" y="0" width="5.489652905755167" height="12" fill="#d2a8ff" />
+            <rect x="0" y="0" width="577.230064701541" height="12" fill="#ff5f57" />
+<rect x="577.230064701541" y="0" width="105.55911676268018" height="12" fill="#ffbd2e" />
+<rect x="682.7891814642212" y="0" width="20.844066939103357" height="12" fill="#28c840" />
+<rect x="703.6332484033246" y="0" width="10.878308423718162" height="12" fill="#58a6ff" />
+<rect x="714.5115568270428" y="0" width="5.488443172957312" height="12" fill="#d2a8ff" />
 
         </g>
         
