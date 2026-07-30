@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://pmshadin.dev" target="_blank">
-    <img src="./neofetch.svg?v=1785290800" alt="Neofetch Stats" />
+    <img src="./neofetch.svg?v=1785376598" alt="Neofetch Stats" />
     <br/>
-    <img src="./github_advanced_stats.svg?v=1785290803" alt="Advanced GitHub Stats" />
+    <img src="./github_advanced_stats.svg?v=1785376600" alt="Advanced GitHub Stats" />
   </a>
 </p>
