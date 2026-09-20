@@ -51,7 +51,7 @@
     
     <text x="30" y="105"><tspan class="label">Total Stars Earned</tspan><tspan class="colon">    : </tspan><tspan class="value">0</tspan></text>
     <text x="30" y="130"><tspan class="label">Public Commits</tspan><tspan class="colon">        : </tspan><tspan class="value">115</tspan></text>
-    <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">201</tspan></text>
+    <text x="30" y="155"><tspan class="label">Private Commits</tspan><tspan class="colon">       : </tspan><tspan class="value">203</tspan></text>
     <text x="30" y="180"><tspan class="label">Total PRs</tspan><tspan class="colon">             : </tspan><tspan class="value">11</tspan></text>
     <text x="30" y="205"><tspan class="label">Contributed to (last year): </tspan><tspan class="value">2</tspan></text>
     <text x="360" y="105"><tspan class="label">Total Issues</tspan><tspan class="colon">          : </tspan><tspan class="value">5</tspan></text>
@@ -86,7 +86,7 @@
 
     <!-- Total Contributions -->
     <g transform="translate(160, 110)">
-        <text x="0" y="-3" class="highlight">342</text>
+        <text x="0" y="-3" class="highlight">344</text>
         <text x="0" y="50" fill="#e6edf3" font-size="14" text-anchor="middle" font-family="'JetBrains Mono', monospace">Total Contributions</text>
         <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">2021 - Present</text>
     </g>
@@ -96,13 +96,13 @@
         <!-- Background Track with Gap -->
         <circle cx="0" cy="-15" r="40" fill="none" stroke="#21262d" stroke-width="6" stroke-linecap="round" stroke-dasharray="221.326 30" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" />
         <!-- Orange Progress Ring -->
-        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.0 251.327" stroke-dashoffset="-15" transform="rotate(-90 0 -15)" visibility="hidden" />
+        <circle cx="0" cy="-15" r="40" fill="none" stroke="#f0883e" stroke-width="6" stroke-linecap="round" stroke-dasharray="73.77533333333332 177.55166666666668" stroke-dashoffset="-15" transform="rotate(-90 0 -15)"  />
         <!-- Flame Icon -->
         <path d="M0,-8 C3,-4 5,-1 5,2 C5,4.8 2.8,7 0,7 C-2.8,7 -5,4.8 -5,2 C-5,-0.5 -2,-3 -1,-5 C-1.5,-4 -2,-2.5 -2,-1 C-2,1 -0.5,2 0.5,2 C1.5,2 2,1 2,-0.5 C2,-1.5 1.5,-3 0 -5 Z" fill="#f0883e" transform="translate(0, -55) scale(1.1)"/>
         
-        <text x="0" y="-3" class="highlight" font-size="32">0</text>
+        <text x="0" y="-3" class="highlight" font-size="32">1</text>
         <text x="0" y="50" fill="#f0883e" font-weight="bold" font-size="16" text-anchor="middle" font-family="'JetBrains Mono', monospace">Current Streak</text>
-        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">None</text>
+        <text x="0" y="75" fill="#8b949e" font-size="12" text-anchor="middle" font-family="'JetBrains Mono', monospace">Sep 20 - Sep 20</text>
     </g>
 
     <!-- Longest Streak -->
@@ -136,11 +136,11 @@
             <rect x="0" y="0" width="720" height="12" rx="6" />
         </clipPath>
         <g clip-path="url(#bar-clip)">
-            <rect x="0" y="0" width="575.0874508849405" height="12" fill="#ff5f57" />
-<rect x="575.0874508849405" y="0" width="100.53240476273267" height="12" fill="#ffbd2e" />
-<rect x="675.6198556476731" y="0" width="19.85147506619046" height="12" fill="#28c840" />
-<rect x="695.4713307138636" y="0" width="14.16838455539384" height="12" fill="#58a6ff" />
-<rect x="709.6397152692574" y="0" width="10.360284730742675" height="12" fill="#d2a8ff" />
+            <rect x="0" y="0" width="580.4750665394466" height="12" fill="#ff5f57" />
+<rect x="580.4750665394466" y="0" width="96.79477154192163" height="12" fill="#ffbd2e" />
+<rect x="677.2698380813682" y="0" width="19.11342913100559" height="12" fill="#28c840" />
+<rect x="696.3832672123738" y="0" width="13.641626790825805" height="12" fill="#58a6ff" />
+<rect x="710.0248940031996" y="0" width="9.975105996800368" height="12" fill="#d2a8ff" />
 
         </g>
         
@@ -149,22 +149,22 @@
             
     <g transform="translate(0, 50)">
         <circle cx="6" cy="-1" r="6" fill="#ff5f57" />
-        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">TypeScript 79.9%</text>
+        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">TypeScript 80.6%</text>
     </g>
     
     <g transform="translate(240, 50)">
         <circle cx="6" cy="-1" r="6" fill="#ffbd2e" />
-        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">HTML 14.0%</text>
+        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">HTML 13.4%</text>
     </g>
     
     <g transform="translate(480, 50)">
         <circle cx="6" cy="-1" r="6" fill="#28c840" />
-        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">Python 2.8%</text>
+        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">Python 2.7%</text>
     </g>
     
     <g transform="translate(0, 85)">
         <circle cx="6" cy="-1" r="6" fill="#58a6ff" />
-        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">JavaScript 2.0%</text>
+        <text x="20" y="4" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8b949e">JavaScript 1.9%</text>
     </g>
     
     <g transform="translate(240, 85)">
